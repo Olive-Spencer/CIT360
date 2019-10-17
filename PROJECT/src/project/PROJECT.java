@@ -153,32 +153,13 @@ public class PROJECT {
         System.out.print("\n\nThis demonstrates a tree but dosen't really show its functionality."
                 + "\ntrees seem to be designed when you need larger sets for searchability"
                 + "\nand performance. I am not sure how to demo on a small scale\n\n");
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
+                
         
         
     }
     
     
     
-            
-            
-    
-  
-    
-        
-        
-    }
+}
     
 
