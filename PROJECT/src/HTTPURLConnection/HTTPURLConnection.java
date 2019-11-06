@@ -31,8 +31,6 @@ public class HTTPURLConnection {
         while((code = read.readLine()) != null)
         {
             System.out.println(code);
-                 
-       
         }
         //close the connection
         read.close();
