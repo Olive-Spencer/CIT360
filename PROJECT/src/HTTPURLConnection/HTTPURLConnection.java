@@ -18,7 +18,7 @@ public class HTTPURLConnection {
        //puts the URL into a string. This could be something entered by the user.
        String url = "https://olive-spencer.github.io/CIT-261/a12.html";
        //checks to see if the url is valid. If it is it executed the code.
-       if (isValid(url)){
+       if (valid(url)){
         //creating the url object
         URL website = new URL(url);  
         //opening the connection to the url
@@ -41,7 +41,7 @@ public class HTTPURLConnection {
     }
     
 //checking to see if the url is valid and sending back the correct bool value.
-public static boolean isValid(String url)
+public static boolean valid(String url)
 {
     try{
         new URL(url).toURI();
