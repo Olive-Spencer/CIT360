@@ -64,6 +64,7 @@ public class testCases {
     }
     @Test
     public void notSame(){
+        //as long as notNull() isn't passed a 1 this test will pass.
         String check = test.notNull(2);
         assertNotSame(null, check);
     }
