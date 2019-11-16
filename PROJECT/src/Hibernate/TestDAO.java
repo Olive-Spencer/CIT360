@@ -32,15 +32,15 @@ public class TestDAO {
     }
 
     
-    public List<Customer> getCustomers() {
+    public List<Family> getFamilyMembers() {
 
         try {
             session = factory.openSession();
             session.getTransaction().begin();
-            String sql = "from Hibernate.Customer";
-            List<Customer> cs = (List<Customer>)session.createQuery(sql).getResultList();
+            String sql = "from Hibernate.Family";
+            List<Family> fm = (List<Family>)session.createQuery(sql).getResultList();
             session.getTransaction().commit();
-            return cs;
+            return fm;
 
         } catch (Exception e) {
             e.printStackTrace();
@@ -54,15 +54,15 @@ public class TestDAO {
     }
 
     
-    public Customer getCustomer(int id) {
+    public Family getFamily(int id) {
 
         try {
             session = factory.openSession();
             session.getTransaction().begin();
-            String sql = "from Hibernate.Customer where id=" + Integer.toString(id);
-            Customer c = (Customer)session.createQuery(sql).getSingleResult();
+            String sql = "from Hibernate.Family where id=" + Integer.toString(id);
+            Family f = (Family)session.createQuery(sql).getSingleResult();
             session.getTransaction().commit();
-            return c;
+            return f;
 
         } catch (Exception e) {
             e.printStackTrace();
@@ -74,15 +74,14 @@ public class TestDAO {
         }
     }
     
-    //used to add a customer
-public void addCustomer(){
+public void addFamily(){
     
     
     try{
     session = factory.openSession();
     session.getTransaction().begin();
-    Customer cust = new Customer(4, "Emerson", "5551231234");
-    session.saveOrUpdate(cust);
+    Family fam = new Family(4, "Dale", "Grandpa", "5555555555");
+    session.saveOrUpdate(fam);
     session.getTransaction().commit();
     
     
@@ -96,14 +95,14 @@ public void addCustomer(){
         session.close();}
     }
 
-//used to remove the added customer
-public void removeCustomer(){
+
+public void removeFamily(){
     
     try{
     session = factory.openSession();
     session.getTransaction().begin();
-    Customer cust = new Customer(4, "Emerson", "5551231234");
-    session.delete(cust);
+    Family fam = new Family(4, "Dale", "Grandpa", "5555555555");
+    session.delete(fam);
     session.getTransaction().commit();}
     
     catch (Exception e) {
@@ -114,20 +113,20 @@ public void removeCustomer(){
     finally{ 
         session.close();}
     }
-//used to update the first customer
-public void updateCustomer(){
+
+public void updateFamily(){
     try {
             session = factory.openSession();
             session.getTransaction().begin();
-            String sql = "from Hibernate.Customer where id=" + 1;
-            Customer c = (Customer)session.createQuery(sql).getSingleResult();
-            String name = c.getName();
+            String sql = "from Hibernate.Family where id=" + 2;
+            Family f = (Family)session.createQuery(sql).getSingleResult();
+            String name = f.getName();
             if("Recneps".equals(name)){
-                c.setName("Spencer");
+                f.setName("Spencer");
             }else{
-                c.setName("Recneps");
+                f.setName("Recneps");
             }
-            session.update(c);
+            session.update(f);
             session.getTransaction().commit();
             
 

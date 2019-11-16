@@ -63,7 +63,7 @@ Contributor(s):
         <property name="show_sql">true</property>
 
         <!-- Mapping to Data Object Class -->
-        <mapping class="Hibernate.Customer" />
+        <mapping class="Hibernate.Family" />
 
   </session-factory>
 </hibernate-configuration>

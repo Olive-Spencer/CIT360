@@ -12,18 +12,18 @@ public class RunHibernateExample {
     public static void main(String[] args) {
 
         TestDAO t = TestDAO.getInstance();
-        t.addCustomer();
-        List<Customer> c = t.getCustomers();
-        for (Customer i : c) {
+        t.addFamily();
+        List<Family> f = t.getFamilyMembers();
+        for (Family i : f) {
             System.out.println(i);
         }
-        t.removeCustomer();
-        t.updateCustomer();
-        List<Customer> d = t.getCustomers();
-        for (Customer i : d) {
+        t.removeFamily();
+        t.updateFamily();
+        List<Family> d = t.getFamilyMembers();
+        for (Family i : d) {
             System.out.println(i);
         }
         
-        System.out.println(t.getCustomer(1));
+        System.out.println(t.getFamily(1));
     }
 }
