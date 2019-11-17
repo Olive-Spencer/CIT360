@@ -54,7 +54,7 @@ public class TestDAO {
     }
 
     
-    public Family getFamily(int id) {
+    public Family getInd(int id) {
 
         try {
             session = factory.openSession();

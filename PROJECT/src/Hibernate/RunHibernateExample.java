@@ -24,6 +24,6 @@ public class RunHibernateExample {
             System.out.println(i);
         }
         
-        System.out.println(t.getFamily(1));
+        System.out.println(t.getInd(1));
     }
 }

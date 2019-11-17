@@ -30,7 +30,7 @@ public class Controller{
         
         if (checkDate(ageInt)){
             //no dates for you!
-            age = "You are not old enough to date!";
+            return "You are not old enough to date!";
             
         }
         return "you are old enough to date!";
