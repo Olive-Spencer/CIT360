@@ -15,10 +15,6 @@
         <welcome-file-list>
             <welcome-file>index.html</welcome-file>
         </welcome-file-list>
-        <servlet>
-            <servlet-name>testing</servlet-name>
-            <servlet-class>testing</servlet-class>
-        </servlet>
-        <servlet-mapping/>
+        
     </session-config>
 </web-app>
