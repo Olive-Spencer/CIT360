@@ -17,32 +17,23 @@ import javax.servlet.http.HttpServletResponse;
  */
 public class test1 extends HttpServlet {
 
-       // Method to handle GET method request.
    @Override
    public void doGet(HttpServletRequest request, HttpServletResponse response)
       throws ServletException, IOException {
       
-      // Set response content type
+      
       response.setContentType("text/html");
 
       PrintWriter out = response.getWriter();
-      String title = "The answer is printed below.";
-      String docType =
-         "<!doctype html public \"-//w3c//dtd html 4.0 " +
-         "transitional//en\">\n";
       int num1 = Integer.valueOf(request.getParameter("num1"));
       int num2 = Integer.valueOf(request.getParameter("num2"));
       int ans = num1+num2;
          
-      out.println(docType +
+      out.println("<!doctype html>" +
          "<html>\n" +
-            "<head><title>" + title + "</title></head>\n" +
-            "<body bgcolor = \"#f0f0f0\">\n" +
-               "<h1 align = \"center\">" + title + "</h1>\n" +
-               "<ul>\n" +
-                  "  <li><b>Answer</b>: "
-                  +  ans +
-               "</ul>\n" +
+            "<head><title>" + "Answer" + "</title></head>\n" +
+            "<h1>The Answer is printed below</h1>\n" +
+            "\n" +"<b>Answer</b>: " +  ans +
             "</body>" +
          "</html>"
       );
