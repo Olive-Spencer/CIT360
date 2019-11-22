@@ -20,11 +20,11 @@ public class runACP {
 		// TODO Auto-generated method stub
 		//Put in sample data for program example 
 		
-		String[] mySons = {"Kyle", "Dallin"};
-		String[] myDaughters = {"Zenna", "Sarah", "Hannah"};
-		String[] ourFavorites = {"Camping", "Surfing", "Snowboarding and Skiing", "Boating", "Hiking", "Christmas", "Laughing"};
+		String[] crust = {"Stuffed", "Thin", "Chicago"};
+		String[] sauce = {"Tomato", "White"};
+		String[] tops = {"Tomato", "Peppers", "Pepproni", "Pineapple", "Extra Cheese", "Anchovies", "Ham"};
 		
-		Model myFamily = new Model("Traesa", "Ben", mySons, myDaughters, ourFavorites);
+		Model pizza = new Model(crust, sauce, tops);
 		
 		
 		Controller controller = new Controller();
@@ -41,19 +41,19 @@ public class runACP {
 			case 1: 
 				System.out.println();
 				
-				controller.doCommand("displayParents", GetCommmandData("Family", myFamily));
+				controller.doCommand("displayCrust", GetCommmandData("Pizza", pizza));
 				
 				break;
 			case 2:
 				System.out.println();
 				
-				controller.doCommand("displayChildren", GetCommmandData("Family", myFamily));
+				controller.doCommand("displaySauce", GetCommmandData("Pizza", pizza));
 				break;
 				
 			case 3:
 				System.out.println();
 				
-				controller.doCommand("displayFamilyFavorites", GetCommmandData("Family", myFamily));
+				controller.doCommand("displayTops", GetCommmandData("Pizza", pizza));
 				break;	
 				
 			case 4:

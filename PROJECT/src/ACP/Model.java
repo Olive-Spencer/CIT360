@@ -10,58 +10,41 @@ package ACP;
  * @author spencer
  */
 public class Model {
-    String Mom;
-	String Dad;
-	String [] Sons;
-	String [] Daughters;
-	String [] Favorites;
+        
+	String [] Crust;
+	String [] Sauce;
+	String [] Tops;
 
-	public Model(String mom, String dad, String[] sons, String[] daughters, String []favorites) {
-		this.Mom= mom;
-		this.Dad = dad;
-		this.Sons = sons;
-		this.Daughters = daughters;
-		this.Favorites = favorites;
+	public Model(String[] crust, String[] sauce, String [] tops) {
+		this.Crust = crust;
+		this.Sauce = sauce;
+		this.Tops = tops;
 	}
 
-	protected String getMom() {
-		return Mom;
+	
+
+	protected String[] getCrust() {
+		return Crust;
 	}
 
-	protected void setMom(String mom) {
-		Mom = mom;
+	protected void setCrust(String[] crust) {
+		Crust = crust;
 	}
 
-	protected String getDad() {
-		return Dad;
+	protected String[] getSauce() {
+		return Sauce;
 	}
 
-	protected void setDad(String dad) {
-		Dad = dad;
+	protected void setSauce(String[] sauce) {
+		Sauce = sauce;
 	}
 
-	protected String[] getSons() {
-		return Sons;
+	protected String[] getTops() {
+		return Tops;
 	}
 
-	protected void setSons(String[] sons) {
-		Sons = sons;
-	}
-
-	protected String[] getDaughters() {
-		return Daughters;
-	}
-
-	protected void setDaughters(String[] daughters) {
-		Daughters = daughters;
-	}
-
-	protected String[] getFavorites() {
-		return Favorites;
-	}
-
-	protected void setFavorites(String[] favorites) {
-		Favorites = favorites;
+	protected void setTops(String[] tops) {
+		Tops = tops;
 	}
 
 }

@@ -22,11 +22,11 @@ public class DisplayMenuHandler implements Handler{
 	public Object handleIt(HashMap<String, Object> data) {
 		
 		String menuList = "\n---------------------------------------------------"
-		        +"\n|  Main Menu For Familiy Information              |"
+		        +"\n|  Main Menu Pizza Choices              |"
 		        +"\n---------------------------------------------------"
-		        +"\n1 - Display Parents        "
-		        +"\n2 - Display Children"    
-		        +"\n3 - Display Familiy Favorites"
+		        +"\n1 - Display Crust"
+		        +"\n2 - Display Sauce"    
+		        +"\n3 - Display Toppings"
 		        +"\n4 - Quit"
 
 		        +"\n---------------------------------------------------"
@@ -48,7 +48,7 @@ public class DisplayMenuHandler implements Handler{
 			return result;
 		}
 		catch (Exception e) {
-			System.out.println("You must enter a number form the menu.");
+			System.out.println("You must enter a number from the menu.");
 			return -1;
 		}
 		

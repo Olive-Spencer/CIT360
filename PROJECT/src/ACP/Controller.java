@@ -19,15 +19,15 @@ public class Controller {
 		//constructor
 		commands = new HashMap<String, Handler>();
 		commands.put("displayMenu", new DisplayMenuHandler());
-		//commands.put("displayParents", new DisplayParentsHandler());
-		//commands.put("displayChildren", new DisplayChildrenHandler());
-		//commands.put("displayFamilyFavorites", new DisplayFamilyFavoritesHandler());
+		commands.put("displayCrust", new DisplayCrustHandler());
+                commands.put("displaySauce", new DisplaySauceHandler());
+		commands.put("displayTops", new DisplayTopsHandler());
 	}
 		
 	public Object doCommand(String commandKey, HashMap<String, Object> commandData) throws Exception{
 		Handler command = commands.getOrDefault(commandKey, null);
 		if(command==null) {
-			throw new Exception("Ther is no command with the key word'" + commandKey +"'.");
+			throw new Exception("There is no command with the keyword'" + commandKey +"'.");
 		}
 		
 		return command.handleIt(commandData);

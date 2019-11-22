@@ -6,30 +6,39 @@
 package TEandR;
 
 
+import java.util.concurrent.*;
+import java.util.concurrent.atomic.AtomicInteger;
+
+
+
 
 /**
  *
  * @author spencer
  */
+
 public class threads{
     public static void main(String[] args) {
-    Thread t1 = new Thread(new runnableMe("Turtle"));
-    Thread t2 = new Thread(new runnableMe("Rabbit"));
-    Thread t3 = new Thread(new runnableMe("Sloth"));
-    Thread t4 = new Thread(new runnableMe("Aardvark"));
-    Thread t5 = new Thread(new runnableMe("Done"));
-    t1.start();
-    t2.start();
-    t3.start();
-    t4.start();
-    t5.start();
-    System.out.print("The race has started!\n");
-    
- 
-    
-    
-    
-    
-    
+        System.out.println("This program is going to use 10 threads to count to 100,000,000\n"
+                + "When it is finished it will print out atomic.get() which will be 100,000,000\n"
+                + "Please be patient this takes a short time");
+        pool();
+        
+
 }
+    public static void pool(){
+        ThreadPoolExecutor executor = (ThreadPoolExecutor) Executors.newFixedThreadPool(10);
+        AtomicInteger atom = new AtomicInteger(0);
+        
+       
+        
+       for (int i = 0; i < 10; i++){
+           executor.submit(new runMe(atom));
+       }
+       executor.shutdown();
+        
+    }
+    
+   
+
 }
