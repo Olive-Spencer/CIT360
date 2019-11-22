@@ -30,16 +30,16 @@ public class runMe implements Runnable {
     public void run(){
         try{
             
-            for(int i = 0; i < 10000000; i++){
+            for(int i = 0; i < 10000; i++){
             atomic.updateAndGet(oneplus);
             }
         }
         catch(Exception e){}
        
     
-        if (atomic.get() == 100000000){
+        
         System.out.println(atomic);
-        }
+        
     
     } 
 }

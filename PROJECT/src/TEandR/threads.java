@@ -27,13 +27,16 @@ public class threads{
 
 }
     public static void pool(){
-        ThreadPoolExecutor executor = (ThreadPoolExecutor) Executors.newFixedThreadPool(10);
+        ExecutorService exe = Executors.newFixedThreadPool(10);
+        ThreadPoolExecutor executor = (ThreadPoolExecutor) exe;
         AtomicInteger atom = new AtomicInteger(0);
         
        
         
        for (int i = 0; i < 10; i++){
+           
            executor.submit(new runMe(atom));
+           
        }
        executor.shutdown();
         
