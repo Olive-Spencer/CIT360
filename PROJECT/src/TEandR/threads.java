@@ -19,8 +19,8 @@ import java.util.concurrent.atomic.AtomicInteger;
 
 public class threads{
     public static void main(String[] args) {
-        System.out.println("This program is going to use 10 threads to count to 100,000,000\n"
-                + "When it is finished it will print out atomic.get() which will be 100,000,000\n"
+        System.out.println("This program is going to use 10 threads to count to 150,000\n"
+                + "When it is finished it will print out atomic.get() which will be 150,000\n"
                 + "Please be patient this takes a short time");
         pool();
         
@@ -39,7 +39,19 @@ public class threads{
            
        }
        executor.shutdown();
-        
+       
+       Thread thread1 = new Thread(new runMe(atom));
+       Thread thread2 = new Thread(new runMe(atom));
+       Thread thread3 = new Thread(new runMe(atom));
+       Thread thread4 = new Thread(new runMe(atom));
+       Thread thread5 = new Thread(new runMe(atom));
+       thread1.start();
+       thread2.start();
+       thread3.start();
+       thread4.start();
+       thread5.start();
+       
+       
     }
     
    
